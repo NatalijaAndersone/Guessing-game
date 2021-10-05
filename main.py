@@ -28,7 +28,7 @@ while number_of_guesses < 3:
         break
 if guess == number:
     print( 'Congratulations {}, you guessed the number in {} tries!'.format(player_name, number_of_guesses))
-    logging.info('Player won with ' + str(number_of_guesses) + ' number of guesses')
+    logging.info('Player won with ' + str(number_of_guesses) + ' guesses')
 else:
     print('Close but no cigar, you couldn\'t guess the number. \nWell, the number was {}.'.format(number))
     logging.info('Player lost')
