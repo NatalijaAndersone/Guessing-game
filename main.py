@@ -1,4 +1,8 @@
-import random, logging
+import random, logging, configparser
+
+config = configparser.ConfigParser()
+config.read('./config.ini')
+
 number = random.randint(1, 10)
 
 
