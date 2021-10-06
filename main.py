@@ -1,11 +1,11 @@
-import random, logging, configparser
+import random, logging, configparser #import needed packages
 
 config = configparser.ConfigParser()
 config.read('./config.ini')
 
 number = random.randint(1, 10)
 
-
+#logging setup
 logging.basicConfig(filename='guess.log', level=logging.DEBUG, format='%(asctime)s %(message)s')
 
 
@@ -16,6 +16,7 @@ logging.info('Player name ' + player_name)
 number_of_guesses = 0
 print('I\'m glad to meet you! {} \nLet\'s play a game with you, I will think a number between 1 and 10 then you will guess, alright? \nDon\'t forget! You have only 3 chances so guess:'.format(player_name))
 
+# cycle for the guessees
 while number_of_guesses < 3:
     guess = int(input())
     logging.info('Player guessed: ' + str(guess))
@@ -26,6 +27,7 @@ while number_of_guesses < 3:
         print('Your estimate is too high, go down a bit!')
     if guess == number:
         break
+        #Game ending
 if guess == number:
     print( 'Congratulations {}, you guessed the number in {} tries!'.format(player_name, number_of_guesses))
     logging.info('Player won with ' + str(number_of_guesses) + ' guesses')
