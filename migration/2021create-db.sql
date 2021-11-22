@@ -1,0 +1,3 @@
+CREATE TABLE IF NOT EXISTS data(
+	name varchar(255) NOT NULL,
+	score INT NOT NULL)
