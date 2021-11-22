@@ -1,3 +1,4 @@
+
 import logging
 import logging.config
 import mysql.connector
@@ -17,7 +18,7 @@ with open('./log_migrate_db.yaml', 'r') as stream:
 # Creating logger
 logger = logging.getLogger('root')
 
-logger.info('Asteroid DB migration service')
+logger.info('Guessing Game DB migration service')
 
 # Initiating and reading config values
 logger.info('Loading configuration from file')
