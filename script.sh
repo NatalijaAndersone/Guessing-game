@@ -4,10 +4,10 @@ echo "Script for preparing the development environment"
 echo "------------------------------------------------"
 
 echo "Checking if config.ini exists in the current working dir -->"
-if test -f "config.ini"; then
+if test -f "C:\Users\natan\PycharmProjects\Guessing-game\config.ini"; then
     echo "exists"
 else
-	if [ $? -eq 0 ]; then echo "OK"; else echo "Problem copying config.ini file"; exit 1; fi
+	if [ $? -eq 0 ]; then echo "OK"; else echo "No config.ini file"; exit 1; fi
 fi
 echo "------------------------------------------------"
 
