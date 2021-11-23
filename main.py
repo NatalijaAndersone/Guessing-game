@@ -39,7 +39,13 @@ print(
 
 # cycle for the guesses
 while number_of_guesses < 5:
-    guess = int(input())
+    try:
+        guess = int(input())
+    except:
+        print('Not a number')
+        continue
+
+
     logging.info('Player guessed: ' + str(guess))
     number_of_guesses += 1
     if guess < number:
