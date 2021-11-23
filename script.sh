@@ -18,5 +18,3 @@ else
 	if [ $? -eq 0 ]; then echo "OK"; else echo "No log_migrate_db.yaml file"; exit 1; fi
 fi
 echo "------------------------------------------------"
-
-echo "ALL SET UP!"
