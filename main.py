@@ -37,7 +37,7 @@ print(
     'I\'m glad to meet you! {} \nLet\'s play a game with you, I will think a number between 1 and 15 then you will '
     'guess, alright? \nDon\'t forget! You have only 5 chances so guess:'.format(player_name))
 
-# cycle for the guessees
+# cycle for the guesses
 while number_of_guesses < 5:
     guess = int(input())
     logging.info('Player guessed: ' + str(guess))
@@ -51,11 +51,10 @@ while number_of_guesses < 5:
         # Game ending
 if guess == number:
     score = 60/number_of_guesses
-# Ievada rezultātu datubāze
+# inserts result in database
     mycursor.execute(
         "INSERT INTO data (name,score,guesses) VALUES ('" + str(player_name) + "','"+ str(score) + "','"+ str(number_of_guesses) + "')")
     connection.commit()
-
 
     print('Congratulations {}, you guessed the number in {} tries! Your score is {}!'.format(player_name, number_of_guesses, score))
     logging.info('Player won with ' + str(number_of_guesses) + ' guesses. Score is ' + str(score))
@@ -63,7 +62,7 @@ else:
     score = 0
     print('Close but you couldn\'t guess the number. \nWell, the number was {}. Your score is {}'.format(number, score))
     logging.info('Player lost. Score is ' + str(score))
-# Ievada rezultātu datubāze
+# inserts result in database
     mycursor.execute(
         "INSERT INTO data (name,score,guesses) VALUES ('" + str(player_name) + "','" + str(score) + "','" + str(
             number_of_guesses) + "')")
