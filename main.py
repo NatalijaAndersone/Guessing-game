@@ -1,9 +1,9 @@
-import configparser  # import needed packages
+# import needed packages
+import configparser
 import logging
 import random
 import mysql.connector
-
-
+# Set up config parser and database values to connect to database trough config file
 config = configparser.ConfigParser()
 config.read('./config.ini')
 
@@ -12,14 +12,14 @@ mysql_config_mysql_db = config.get('mysql_config', 'mysql_db')
 mysql_config_mysql_user = config.get('mysql_config', 'mysql_user')
 mysql_config_mysql_pass = config.get('mysql_config', 'mysql_pass')
 
-
+# generate a number for the game
 number = random.randint(1, 15)
 
 # logging setup
 logging.basicConfig(filename='guess.log', level=logging.DEBUG, format='%(asctime)s %(message)s')
 
 
-#database connection
+# connect to database
 connection = mysql.connector.connect(host=mysql_config_mysql_host, database=mysql_config_mysql_db,
                                     user=mysql_config_mysql_user, password=mysql_config_mysql_pass)
 

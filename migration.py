@@ -20,9 +20,9 @@ logger = logging.getLogger('root')
 
 logger.info('Guessing Game DB migration service')
 
-# Initiating and reading config values
-logger.info('Loading configuration from file')
 
+logger.info('Loading configuration from file')
+# Set up config parser and database values to connect to database trough config file
 try:
     config = ConfigParser()
     config.read('config.ini')
@@ -39,7 +39,7 @@ logger.info('DONE')
 connection = None
 connected = False
 
-
+# Function to connect to database
 def init_db():
     global connection
     connection = mysql.connector.connect(host=mysql_config_mysql_host, database=mysql_config_mysql_db,

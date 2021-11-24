@@ -1,0 +1,14 @@
+2021-11-24 08:50:26,957 - INFO - migration : Guessing Game DB migration service
+2021-11-24 08:50:26,972 - INFO - migration : Loading configuration from file
+2021-11-24 08:50:26,975 - INFO - migration : DONE
+2021-11-24 08:50:27,010 - INFO - migration : Connecting to MySQL DB
+2021-11-24 08:50:27,012 - INFO - migration : Connected to MySQL database. MySQL Server version on 5.5.5-10.3.13-MariaDB
+2021-11-24 08:50:27,019 - INFO - migration : Migrations table exists
+2021-11-24 08:50:27,027 - INFO - migration : No migrations to execute
+2021-11-24 08:53:55,286 - INFO - migration : Guessing Game DB migration service
+2021-11-24 08:53:55,286 - INFO - migration : Loading configuration from file
+2021-11-24 08:53:55,287 - INFO - migration : DONE
+2021-11-24 08:53:55,297 - INFO - migration : Connecting to MySQL DB
+2021-11-24 08:53:55,298 - INFO - migration : Connected to MySQL database. MySQL Server version on 5.5.5-10.3.13-MariaDB
+2021-11-24 08:53:55,301 - INFO - migration : Migrations table exists
+2021-11-24 08:53:55,305 - INFO - migration : No migrations to execute

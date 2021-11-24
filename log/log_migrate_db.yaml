@@ -8,7 +8,7 @@ formatters:
 handlers:
   file:
     class: logging.handlers.TimedRotatingFileHandler
-    level: INFO
+    level: DEBUG
     formatter: complex
     filename: log/migrate_db.log
     when: 'midnight'
